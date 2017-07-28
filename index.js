@@ -12,8 +12,9 @@ var root = {
   }
 }
 
-graphql(schema, '{hello}', root).then((response) => {
+async function main() {
+  response = await graphql(schema, '{hello}', root)
   console.log(response)
-})
+}
 
-graphql(schema, '{hello}')
+main()
